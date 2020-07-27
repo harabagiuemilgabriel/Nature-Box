@@ -1,0 +1,51 @@
+﻿@model NatureBox.Models.LoginModel
+
+@if(Session["UserName"]!=null)
+{
+    Response.Redirect(Url.Action("Index", "Home"));
+}
+
+
+@{
+    ViewBag.Title = "Login";
+}
+
+    <div class="login-form">
+        <h2 class="title">Login</h2>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-horizontal">
+
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2", autocomplete="off" })
+                    <div class="col-md-10">
+                        
+                        <input type="text" autocomplete="off" name="Email" placeholder="Email" class="form-control text-box single-line" />
+                        @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        <input type="password" autocomplete="off" name="Password" placeholder="Password" class="form-control text-box single-line" />
+                        @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group"> 
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Login" class="btn btn-default" />
+                    </div>
+                </div>
+                <div class="error-messege">@Html.ValueFor(model=>model.Errormessege)</div>
+            </div>
+        }
+
+    <div class="Messege SignUp-text-button">If you don't have an account, @Html.ActionLink("SignUp", "SignUp", "Authentication")!</div>
+    </div>
+@section forPage { @Styles.Render("~/Content/Style/LoginRegister/LoginRegisterStyle.css")}

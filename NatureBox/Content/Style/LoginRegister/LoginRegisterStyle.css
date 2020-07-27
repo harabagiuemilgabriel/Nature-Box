@@ -1,0 +1,156 @@
+﻿
+
+
+body {
+
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient(50% 50% at 50% 50%, #292D31 0%, #1C1D1E 100%);
+}
+
+.container
+{
+    height:80vh;
+    position:relative;
+}
+
+.login-form {
+    font-family:sans-serif;
+    position: absolute;
+    width: 80vw;
+    max-width:950px;
+    height: 70vh;
+    margin: auto;
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%,-50%);
+    background-color: #222629;
+    border-radius:10px;
+}
+
+.container .title {
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    transform: translateX(-50%);
+    color: #86C232;
+    font-size: 60px;
+}
+
+.form-horizontal {
+    
+    width: 80%;
+    height: 60%;
+    position: absolute;
+    left: 40%;
+    top: 65%;
+    transform: translate(-50%,-50%);
+    
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 30px;
+    width:100%;
+}
+
+.control-label {
+    margin-right: 20px;
+    color: #86C232;
+    width:100%;
+    font-size: 18px;
+    float:left;
+    text-align:right;
+}
+
+.form-control {
+    background-color: #6B6E70;
+    border: none;
+    border-radius: 5px;
+    height: 23px;
+    width: 200px;
+    float: left;
+}
+
+.text-box:focus {
+    outline: none !important;
+    color: #86C232;
+    background-color: #474B4F;
+    caret-color: #86C232;
+}
+
+.text-box {
+    color: #61892F;
+    padding: 0 10px;
+    background-color: #474B4F;
+    transition:.25s ease-out;
+}
+
+.btn {
+    position:absolute;
+    left:50%;
+    background-color: #61892F;
+    border:none;
+    padding:5px 30px;
+    margin-top:30px;
+    border-radius:5px;
+    cursor:pointer;
+    transition:.3s ease-in-out;
+    align-content:center;
+    justify-content:center;
+    width:30%;
+}
+
+.btn:focus
+{
+    outline:none;
+}
+
+    .btn:hover {
+        background-color: #86C232;
+        padding:5px 33px;
+    }
+
+.Messege {
+    position: absolute;
+    color: white;
+    top: 70%;
+    left: 20%;
+    color: #6B6E70;
+    font-size: 15px;
+}
+
+    .Messege a {
+        color: #86C232;
+        margin: 0 2px;
+    }
+label {
+    width: 200px;
+}
+.col-md-10
+{
+    display:flex;
+    flex-direction:column;
+    color:#61892F;
+    width:100%;
+}
+
+.text-danger
+{
+    font-size:12px;
+    width:100%;
+    left:50%;
+    color:red;
+}
+
+.error-messege
+{
+    position:absolute;
+    left:50%;
+    width:100%;
+    color:red;
+    z-index:5;
+    top:45%;
+}

@@ -1,0 +1,6 @@
+C:\Users\harab\Desktop\NatureBox\NatureBox\NatureBoxDB\bin\Debug\NatureBoxDB.dacpac
+C:\Users\harab\Desktop\NatureBox\NatureBox\NatureBoxDB\bin\Debug\NatureBoxDB.dll
+C:\Users\harab\Desktop\NatureBox\NatureBox\NatureBoxDB\bin\Debug\NatureBoxDB.pdb
+C:\Users\harab\Desktop\NatureBox\NatureBox\NatureBoxDB\obj\Debug\NatureBoxDB.sqlprojAssemblyReference.cache
+C:\Users\harab\Desktop\NatureBox\NatureBox\NatureBoxDB\obj\Debug\NatureBoxDB.dll
+C:\Users\harab\Desktop\NatureBox\NatureBox\NatureBoxDB\obj\Debug\NatureBoxDB.pdb

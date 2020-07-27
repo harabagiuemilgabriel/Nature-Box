@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "Categories";
+}
+
+<div class="content">
+    <h2 class="title">Categories</h2>
+    <div class="buttons">
+
+        <div class="side">
+            <a href="/Shop/Vegetables" class="circle">
+              
+                <img src="~/Imeges/Bro.png" />
+            </a>
+            <p class="text">Vegetables</p>
+        </div>
+        <a href="/Shop/Fruits" class="side">
+            <div class="circle">
+                <img src="~/Imeges/Apple.png" />
+            </div>
+            <p class="text">Fruits</p>
+        </a>
+
+    </div>
+</div>
+
+@section forPage { @Styles.Render("~/Content/Style/Categories/CategoriesStyle.css")}
+

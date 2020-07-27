@@ -1,0 +1,91 @@
+﻿@model IEnumerable<NatureBox.Models.ShoppingCart>
+
+@{
+    ViewBag.Title = "ShoppingCart";
+}   
+
+@section forPage { @Styles.Render("~/Content/Style/ShoppingCartStyle.css")
+@Styles.Render("~/Content/Style/BuyAllStyle.css")}
+@section scripts { @Scripts.Render("~/Content/Js/BuyAll.js")}
+
+
+
+<div class="content-cart">
+    @if (Model.Count() != 0)
+    {
+        <h2 class="title">ShoppingCart</h2>
+        <table class="table">
+            <tr class="names">
+                <th>
+                    @Html.DisplayNameFor(model => model.ProductName)
+                </th>
+
+                <th>
+                    @Html.DisplayNameFor(model => model.ProductQuantity)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ProductPrice)
+                </th>
+                <th>
+                    <p>Total</p>
+                </th>
+                <th></th>
+            </tr>
+
+
+
+            @foreach (var item in Model)
+            {
+                <tr class="products">
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ProductName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ProductQuantity)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ProductPrice) $
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TotalPrice) $
+                    </td>
+                    <td>
+                        @Html.ActionLink("Delete", "Delete", item )
+                    </td>
+                </tr>
+            }
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="total">
+                    <div class="price">
+                        @{
+                            var total = 0f;
+                            foreach (var item in Model)
+                            {
+                                total = total + item.TotalPrice;
+                            }
+                            Url.Content(total.ToString());
+                        }
+                        @Url.Content(total.ToString("0.00")) $
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+        
+            <div class="buy-all">
+                <a onclick="Open(@total.ToString("0.00"))">Buy All</a>
+            </div>
+        
+        }
+    else
+    {
+        <div class="Empty-cart">Empty Cart</div>
+        <a href="/Shop/Categories" class="buy-something">Buy Something</a>
+        
+    }
+</div>
+
+

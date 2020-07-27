@@ -1,0 +1,119 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    @RenderSection("forPage", required: false)
+    @Styles.Render("~/Content/Style/nav-bar.css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+
+    
+    <div class="align">
+        @if (Url.Action().Contains("Vegetables") || Url.Action().Contains("Fruits"))
+        {
+            <div class="Effect">
+                <div class="center-about">
+                    <div class="about-page">
+
+                        <div class="about-title"></div>
+                        <div class="about-content"></div>
+                        <p>Click outside</p>
+
+                    </div>
+                </div>
+            </div>
+        }
+        else if (Url.Action().Contains("ShoppingCart"))
+        {
+            <div class="Effect-shop">
+                <div class="buy-all-canvas">
+                    <div class="buy-all-title"> Are you sure? </div>
+                    <div class="buy-all-no-data-collected">We don't collect any data, this form is just an example</div>
+                    <div class="buy-all-total"></div>
+                    <div class="input-container">
+                        <div class="input-field">
+                            <p>Your Name</p>
+                            <input type="text" class="input-name" />
+                        </div>
+                        <div class="input-field">
+                            <p>Your Adress</p>
+                            <input type="text" class="input-adress" />
+                        </div>
+                        <div class="input-field">
+                            <p>Your Phone Number</p>
+                            <input type="text" class="input-phone" />
+                        </div>
+
+                        <div class="input-field">
+                            <p> Pay method</p>
+                            <div class="check-box">
+                                <div class="card">
+                                    <p>Card</p>
+                                    <input type="checkbox" class="input-pay" name="Card">
+                                    <span class="span"></span>
+                                </div>
+                                <div class="cash">
+                                    <p>Cash</p>
+                                    <input type="checkbox" class="input-pay" name="Cash">
+                                    <span class="span"></span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="buy-all">
+                            @Html.ActionLink("Buy All", "BuyAll")
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+
+       
+
+
+        @if (Session["UserName"] != null)
+        {
+            <div class="user-name">Hello @Session["UserName"]!</div>
+        }
+        <div class="nav-bar">
+            <div class="logo">@Html.ActionLink("NatureBox", "Index", "Home", new { area = "" }, new { @class = "brand-logo" })</div>
+            <div class="nav-bar-buttons">
+                <ul>
+                    <li class="arrange-li li-for-hover nvb-li transition-buttons ">@Html.ActionLink("About", "About", "Home")</li>
+                    <li class="arrange-li li-for-hover nvb-li transition-buttons ">
+                        @Html.ActionLink("Shop", "Categories", "Shop")
+                       
+                    </li>
+                    <li class="li-shopping-cart shopping-cart-login-hover transition-buttons ">
+                        @Html.ActionLink("Shopping Cart", "ShoppingCart", "Shop")
+                        <div class="circle-for-cart transition-buttons"><img src="~/Imeges/shopping-cart.png" class="cart-shopping-cart" /></div>
+                        
+                    </li>
+                    @if (Session["UserName"] == null)
+                    {
+                        <li class="arrange-li li-login login-button shopping-cart-login-hover transition-buttons">@Html.ActionLink("Login", "Login", "Authentication")</li>
+                    }
+                    else
+                    {
+                        <li class="arrange-li li-login login-button shopping-cart-login-hover transition-buttons">@Html.ActionLink("LogOut", "LogOut", "Authentication")</li>
+                    }
+                </ul>
+            </div>
+        </div>
+        <div class="container">
+            @RenderBody()
+        </div>
+
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/Content/Js/Cart-hover.js")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,121 @@
+﻿body {
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient(50% 50% at 50% 50%, #292D31 0%, #1C1D1E 100%);
+}
+
+.content-cart {
+    position:absolute;
+    top:20vh;
+    left:50%;
+    margin-bottom:100px;
+    transform:translateX(-50%);
+    background-color: #222629;
+    border-radius:15px;
+    width:80vw;
+    min-height:300px;
+    padding:50px 10px 150px 10px;
+}
+
+.table
+{
+    position:relative;
+    width:80%;
+    
+    left:50%;
+       
+    top:50%;
+    padding-top:100px;
+
+    transform:translateX(-50%);
+}
+    .table a {
+        color: #61892F;
+    }
+
+.names {
+    color: #61892F;
+    height: 50px;
+    padding: 0;
+}
+
+.products {
+    color: #474B4F;
+    text-align:center;
+    height: 10px;
+}
+
+.total
+{
+    height:40px;
+}
+
+    .total .price {
+        background-color: #61892F;
+        border-radius: 15px;
+        text-align: center;
+        letter-spacing: 1px;
+        color: #222629;
+        font-size:16px;
+    }
+
+
+    .Empty-cart
+    {
+        position:absolute;
+        font-size:60px;
+        opacity:.5;
+        top:50%;
+        left:50%;
+        transform:translate(-50%,-50%);
+        color:#474B4F;
+    }
+
+    .buy-something
+    {
+        padding:5px 15px;
+        background-color:#61892F;
+        color:#292D31;
+        border-radius:15px;
+        position:absolute;
+        top:80%;
+        left:50%;
+        transform:translateX(-50%);
+        box-shadow:0 0 25px rgba(0,0,0,.5);
+    }
+
+        .buy-something:hover {
+            color: rgb(230,230,230);
+            background-color: #86C232;
+            box-shadow: 0 0 15px rgba(134,194,50,.3);
+        }
+
+.title
+{
+    color:#86C232;
+    position:absolute;
+    top:10%;
+    left:50%;
+    transform:translateX(-50%);
+    z-index:3;
+}
+
+.buy-all a{
+    padding: 3px 15px;
+    background-color: #61892F;
+    border-radius: 15px;
+    color: #222629;
+    position: fixed;
+    left: 50%;
+    bottom:8%;
+    transform: translateX(-50%);
+    z-index: 15;
+    cursor:pointer;
+    transition:.25s ease-out;
+}
+
+.buy-all a:hover
+{
+    background-color:#86C232;
+    color:white;
+}

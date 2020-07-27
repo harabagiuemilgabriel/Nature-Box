@@ -1,0 +1,35 @@
+﻿@model IEnumerable<NatureBox.Models.Product>
+
+@{
+    ViewBag.Title = "Vegetables";
+}
+<h2 class="title">Vegetables</h2>
+<div class="content">
+
+    @foreach (var item in Model)
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true, "")
+        <div class="item">
+            <div class="circle">
+                <img src="@Url.Content(item.ProductImage)" />
+                <p class="price">@Html.DisplayFor(model => item.ProductPrice)<span class="dolar">$</span></p>
+            </div>
+            <p class="name-of-product"> @Html.DisplayFor(model => item.ProductName)</p>
+            <p class="benefits" name="ProductBenefits">@item.ProductBenefits</p>
+            <div class="about-add">
+                <button class="a-tag about-button" onclick="myFunction('@item.ProductName','@item.ProductAbout')">About</button>
+                @using (@Html.BeginForm("Vegetables", "Shop", item))
+                {
+                    <div class="add-to-cart">
+                        <button type="submit" class="a-tag add" onclick="VegetableCart">Add to cart</button>
+                        <input type="number"  autocomplete="off" name="ProductQuantity" placeholder="Enter quantity" class="background" />
+                    </div>
+                }
+            </div>
+        </div>
+    }
+</div>
+
+@section forPage {@Styles.Render("~/Content/Style/ProductPage.css")}
+@section scripts {@Scripts.Render("~/Content/Js/ProductPageJS.js");}

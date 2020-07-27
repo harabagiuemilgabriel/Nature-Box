@@ -1,0 +1,281 @@
+﻿body {
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient(50% 50% at 50% 50%, #292D31 0%, #1C1D1E 100%);
+}
+
+button
+{
+    cursor:pointer;
+}
+
+.title {
+    position: absolute;
+    top: 10vh;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #86C232;
+    font-size:5vh;
+}
+
+.content
+{
+    margin-top:250px;
+    margin-bottom:150px;
+    display:grid;
+    grid-template-columns:repeat(auto-fill, minmax(400px,1fr));
+    grid-gap:30px;
+}
+
+.item::before
+{
+    opacity:0;
+}
+
+.item::after
+{
+    opacity:1;
+}
+
+
+.item {
+
+    transition:1s ease-out;
+    margin: auto;
+    background-color: #222629;
+    border-radius: 7px;
+    height: 250px;
+    width: 400px;
+    overflow: hidden;
+    position: relative;
+}
+
+.circle {
+    background: radial-gradient(50% 50% at 50% 50%, #292D31 0%, #1C1D1E 100%);
+    position:absolute;
+    height:250px;
+    width:250px;
+    border-radius:50%;
+
+    transform:translate(-35%,-35%);
+}
+
+.circle img
+{
+    position:absolute;
+    width:70px;
+    height:70px;
+    right:70px;
+    bottom:80px;
+}
+
+.dolar {
+    color: #61892F;
+    margin-left:10px;
+    font-size:25px;
+}
+
+.price {
+    position: absolute;
+    color: #86C232;
+    right: 40px;
+    font-size:35px;
+    bottom: 30px;
+    letter-spacing:2px;
+}
+
+.about-button:focus
+{
+    outline:none;
+}
+
+.name-of-product {
+    position: absolute;
+    top: 25px;
+    left:35%;
+    width:250px;
+    color: #61892F;
+    z-index: 4;
+    font-size: 120%;
+    text-align:center;
+    transition:.3s ease-out;
+}
+
+.benefits {
+    position: absolute;
+    left:40%;
+    font-size:14px;
+    width:220px;
+    top: 100px;
+    color: #474B4F;
+}
+
+.about-add
+{
+    position:relative;
+    display:flex;
+    top:200px;
+   
+}
+
+    .about-add .about-button {
+        position:absolute;
+        left:10%;
+        color: #222629;
+        padding: 3px 10px;
+        border-radius: 20px;
+        border:none;
+        background-color: #61892F;
+    }
+
+.add-to-cart {
+    justify-content: center;
+    position: absolute;
+    right: 10%;
+}
+.add {
+    border-radius: 15px;
+    border: none;
+    padding: 3px 10px;
+    position:absolute;
+    right:10%;
+    width:100px;
+    background-color: #61892F;
+    z-index:5;
+}
+
+
+
+.background {
+    position: absolute;
+    width: 100px;
+    color: #61892F;
+    padding: 3px 25px 2px 15px;
+    margin-top: 1px;
+    border: 2px green;
+    border-radius: 15px;
+    background-color: #474B4F;
+    right: 80px;
+    z-index: 1;
+    transition:.25s ease-out;
+}
+
+    input::-webkit-outer-spin-button,
+     input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+.a-tag
+{
+    transition:.3s ease-out;
+}
+
+.a-tag:hover  {
+    background-color: #86C232;
+    color:white;
+}
+
+    .background:focus, .add:focus{
+        outline: none;
+        color: #86C232;
+    }
+
+
+.about-page {
+    pointer-events: none;
+    opacity: 0;
+    transition: .5s ease-out;
+    border-radius: 30px;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #222629;
+    color: white;
+    width: 30vw;
+    min-width:500px;
+    height: 60vh;
+    z-index: 16;
+    box-shadow:0 0 25px rgba(0,0,0,.2);
+    font-size:1vw;
+}
+
+.Effect
+{
+    position:fixed;
+   
+    pointer-events:none;
+    height:100vh;
+    width:220vw;
+    left:0;
+    top:0;
+    z-index:15;
+    opacity:1;
+    transition:.5s ease-out;
+}
+
+.effect
+{
+    background-color:rgba(0,0,0,.3);
+    pointer-events:all;
+}
+
+ .open .about-page
+    {   
+        opacity:1;
+        pointer-events:all;
+        
+    }
+
+.about-title {
+    position: absolute;
+    left: 50%;
+    top: 13%;
+    width:100%;
+    text-align:center;
+
+    transform: translateX(-50%);
+    font-size: 180%;
+    color: #86C232;
+}
+
+.about-page p {
+    position: absolute;
+    bottom: 10%;
+    left:50%;
+    transform:translateX(-50%);
+    color: #474B4F;
+}
+
+.about-content
+{
+    position:relative;
+    width:80%;
+    left:50%;
+    height:50%;
+    text-indent:25px;
+    transform:translateX(-50%);
+    top:28%;
+}
+.about-content p
+{
+    top:10%;
+    position:relative;
+    
+    text-align:justify;
+    letter-spacing:inherit;
+    line-height:16px;
+    margin-top:10px;
+    font-size:16px;
+
+}
+.center-about
+{
+    position:relative;
+    height:100vh;
+    width:100vw;
+}
+
+
+

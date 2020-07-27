@@ -1,0 +1,121 @@
+﻿
+body {
+    height: 100vh;
+    width: 100vw;
+    background: radial-gradient(50% 50% at 50% 50%, #292D31 0%, #1C1D1E 100%);
+    overflow-x: hidden;
+    white-space: initial;
+}
+
+.form-shape {
+    position: relative;
+    width: 80vw;
+    max-width: 1000px;
+    left: 50%;
+    top: 15vh;
+    height: 60vh;
+    background-color: #222629;
+    border-radius: 10px;
+    transform: translateX(-50%);
+}
+
+.form-horizontal {
+    color: #61892F;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+}
+
+.form-group
+{
+    display:flex;
+    margin-top:20px;
+}
+
+.col-md-2
+{
+    width:100px;
+    margin-right:20px;
+    text-align:right;
+}
+
+.col-md-10
+{
+    color:transparent;
+}
+
+input {
+    width: 40vw;
+    max-width: 600px;
+    border-radius: 5px;
+    border: none;
+    padding: 5px 10px;
+    color: #61892F;
+    background-color: #474B4F;
+    check
+}
+    input:focus {
+        outline: none;
+        color: #86C232;
+    }
+
+.messege-box textarea {
+    width: 40vw;
+    max-width: 600px;
+    resize: none;
+    height: 10vw;
+    max-height: 30vh;
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+    background-color: #474B4F;
+    color: #61892F;
+}
+
+    .messege-box textarea:focus {
+        outline: none;
+        color: #86C232;
+    }
+
+::-webkit-scrollbar {
+    width: 8px !important;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0,0,0,.2);
+    border-radius:10px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255,255,255,.08);
+}
+
+.col-md-offset-2 input
+{
+    position:absolute;
+    left:50%;
+    bottom:-8vh;
+    transform:translateX(-50%);
+    width:150px;
+    cursor:pointer;
+    font-size:18px;
+    letter-spacing:1.5px;
+    transition:.5s ease-out;
+}
+
+    .col-md-offset-2 input:hover {
+        color: white;
+        background-color: #86C232;
+    }
+
+.title {
+    position: absolute;
+    z-index:2;
+    top: 18vh;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #86C232;
+    font-size:6vh;
+}
+

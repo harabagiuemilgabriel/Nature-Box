@@ -1,0 +1,22 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<div class="vegetable-img">
+    <img src="~/Imeges/BroccoliBackground.png"/>
+</div>
+<div class="center-text">
+    <div class="big-text">
+        <p class="p1"><span class="green-word">Green</span> is the</p>
+        <p class="p2">new <span class="green-word">gold</span></p>
+    </div>
+    <p class="info-front-page">
+        As part of an overall healthy diet, eating foods such as vegetables that are lower in calories
+        per cup instead of some other higher-calorie food may be useful in helping to lower calorie intake.
+    </p>
+</div>
+
+<div class="Shop-now-text-style">@Html.ActionLink("Shop Now", "Categories", "Shop")</div>
+
+@section forPage {
+  @Styles.Render("~/Content/Style/IndexPageStyle.css")
+}

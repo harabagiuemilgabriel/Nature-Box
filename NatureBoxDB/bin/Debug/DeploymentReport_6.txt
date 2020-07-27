@@ -1,0 +1,24 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       The type for column UserConfirmEmail in table [dbo].[Users] is currently  INT NOT NULL but is being changed to  BIT NOT
+         NULL. Data loss could occur.
+       The type for column UserEmail in table [dbo].[Users] is currently  NVARCHAR (50) NOT NULL but is being changed to  NCHAR
+         (10) NOT NULL. Data loss could occur.
+
+** User actions
+     Alter
+       [dbo].[Users] (Table)
+     Create
+       [dbo].[ShoppingCart] (Table)
+
+** Supporting actions
+
+The type for column UserConfirmEmail in table [dbo].[Users] is currently  INT NOT NULL but is being changed to  BIT NOT NULL. Data loss could occur.
+The type for column UserEmail in table [dbo].[Users] is currently  NVARCHAR (50) NOT NULL but is being changed to  NCHAR (10) NOT NULL. Data loss could occur.
+
