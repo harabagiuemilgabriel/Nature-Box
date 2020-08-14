@@ -7,3 +7,13 @@ Here is the hero page:
 About page: Here i was logged in.
 ![About](./Images/about.png)
 
+Login page: Here you can login, if you already have an account, or you can Sign Up by clicking the button that says 'SignUp'.
+![Login](./Images/login.png)
+
+Fruit list: Here you can add into the cart the amount of products that you like.
+![Fruits](./Images/Fruits.png)
+
+Cart page: The list of all the products that you added into the cart, all of them displayed with the quantity and the price.
+![Cart](./Images/cart.png)
+
+
